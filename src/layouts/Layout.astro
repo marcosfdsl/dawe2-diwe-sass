@@ -4,48 +4,111 @@ interface Props {
 }
 
 const { title } = Astro.props;
+
+import Header from "../components/Header.astro";
+import Carousel from "../components/Carousel.astro";
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang="es">
 	<head>
 		<meta charset="UTF-8" />
 		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Kanit&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
-		<slot />
+		<Header />
+		<div class="contenedor-principal">
+			<div class="carousel-fondo"><Carousel /></div>
+			<div class="contenedor-secundario">
+				<div class="contenedor-scroll">
+					<slot />
+				</div>
+			</div>
+		</div>
 	</body>
 </html>
 <style is:global>
+	/* MOBILE FIRST */
+
 	:root {
-		--accent: 136, 58, 234;
-		--accent-light: 224, 204, 250;
-		--accent-dark: 49, 10, 101;
-		--accent-gradient: linear-gradient(
-			45deg,
-			rgb(var(--accent)),
-			rgb(var(--accent-light)) 30%,
-			white 60%
-		);
+		--valor1: 0;
+		--valor2: 0;
 	}
-	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-		background-size: 224px;
+
+	body {
+		background-color: rgb(172, 172, 172);
+		font-family: "Kanit", sans-serif;
 	}
-	code {
-		font-family:
-			Menlo,
-			Monaco,
-			Lucida Console,
-			Liberation Mono,
-			DejaVu Sans Mono,
-			Bitstream Vera Sans Mono,
-			Courier New,
-			monospace;
+
+	/* Scrollbar */
+	*::-webkit-scrollbar {
+		width: 0.2rem;
+		height: 0.2rem;
+	}
+
+	*::-webkit-scrollbar-thumb {
+		background-color: #ffffff65;
+		border-radius: 0.2rem;
+	}
+
+	/* Contenedores */
+	.contenedor-principal {
+		overflow: hidden;
+		height: 92vh;
+		width: 100vw;
+		position: relative;
+	}
+
+	.contenedor-secundario {
+		position: absolute;
+		top: 46%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		color: white;
+		font-size: 1.25rem;
+		z-index: 2;
+		width: 86%;
+	}
+
+	.contenedor-scroll {
+		height: 92vh;
+		padding-left: 2%;
+		padding-right: 2%;
+		padding-bottom: 4%;
+		overflow-y: auto;
+	}
+
+	/* TABLET */
+
+	@media (min-width: 768px) {
+		/* Scrollbar */
+		*::-webkit-scrollbar {
+			width: 0.3em;
+			height: 0.3em;
+		}
+	}
+
+	/* LAPTOP */
+
+	@media (min-width: 1024px) {
+		/* Contenedores */
+		.contenedor-secundario {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 20px;
+			z-index: 2;
+			width: 66%;
+		}
 	}
 </style>
