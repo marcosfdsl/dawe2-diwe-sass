@@ -17,9 +17,12 @@ import Carousel from "../components/Carousel.astro";
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="preconnect" href="https://fonts.googleapis.com">
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-		<link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap" rel="stylesheet">
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=DM+Serif+Display&display=swap"
+			rel="stylesheet"
+		/>
 		<title>{title}</title>
 	</head>
 	<body>
@@ -42,7 +45,7 @@ import Carousel from "../components/Carousel.astro";
 
 	body {
 		background-color: rgb(172, 172, 172);
-		font-family: 'DM Serif Display', serif;
+		font-family: "DM Serif Display", serif;
 	}
 
 	/* Scrollbar */
@@ -62,26 +65,38 @@ import Carousel from "../components/Carousel.astro";
 		height: 92vh;
 		width: 100vw;
 		position: relative;
-	}
 
-	.contenedor-secundario {
-		position: absolute;
-		top: 46%;
-		left: 50%;
-		transform: translate(-50%, -50%);
-		color: white;
-		font-size: 1.25rem;
-		z-index: 2;
-		width: 86%;
-	}
+		.contenedor-secundario {
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%, -50%);
+			color: white;
+			font-size: 1.25rem;
+			z-index: 2;
+			width: 70%;
+		}
 
-	.contenedor-scroll {
-		height: 92vh;
-		padding-left: 2%;
-		padding-right: 2%;
-		padding-bottom: 4%;
-		overflow-y: auto;
-		background-color: rgba(255, 255, 255, 0.837);
+		.contenedor-scroll {
+			height: 92vh;
+			padding-top: 8%;
+			padding-bottom: 8%;
+			padding-left: 12%;
+			padding-right: 12%;
+			overflow-y: auto;
+			background-color: rgba(255, 255, 255, 0.837);
+			animation: opacidad 0.5s linear;
+		}
+
+		@keyframes opacidad {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 100;
+			}
+		}
 	}
 
 	/* TABLET */
