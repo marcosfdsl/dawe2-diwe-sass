@@ -3,7 +3,43 @@ import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-
+    <div class="flex flex-col items-center justify-center h-full">
+        <h1 class="text-4xl font-bold -mt-8">JOAQUÍN SOROLLA</h1>
+        <h2 class="absolute ml-20 mt-8 text-3xl">Pintor español</h2>
+    </div>
 </Layout>
 
-<style></style>
+<style lang="scss">
+    h1,
+    h2 {
+        animation: cambio-color 5s linear infinite;
+    }
+
+    h1 {
+        --color-1: white;
+        --color-2: black;
+    }
+
+    h2 {
+        --color-1: black;
+        --color-2: white;
+    }
+
+    @keyframes cambio-color {
+        0% {
+            color: var(--color-1);
+        }
+        49% {
+            color: var(--color-1);
+        }
+        50% {
+            color: var(--color-2);
+        }
+        99% {
+            color: var(--color-2);
+        }
+        100% {
+            color: var(--color-1);
+        }
+    }
+</style>
