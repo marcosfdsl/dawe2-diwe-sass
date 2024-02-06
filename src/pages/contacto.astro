@@ -1,0 +1,80 @@
+---
+import Layout from "../layouts/Layout.astro";
+---
+
+<Layout title="Welcome to Astro.">
+    <div class="contenedor-scroll">
+        <h1>CONTACTO</h1>
+        <br />
+        <form id="formulario-mensaje" class="contenedor-formulario">
+            <label class="my-3 text-base md:text-lg lg:text-base" for="nombre"
+                >Nombre:</label
+            >
+            <input
+                class="h-10 w-full text-base px-2 md:text-lg lg:text-base"
+                type="text"
+                id="nombre"
+                name="nombre"
+                placeholder="Nombre"
+                required
+            />
+            <br />
+            <br />
+            <label class="my-3 text-base md:text-lg lg:text-base" for="email"
+                >Email:</label
+            >
+            <input
+                class="h-10 w-full text-base px-2 md:text-lg lg:text-base"
+                type="email"
+                id="email"
+                name="email"
+                placeholder="Email"
+                required
+            />
+            <br />
+            <br />
+            <label class="my-3 text-base md:text-lg lg:text-base" for="asunto"
+                >Asunto:</label
+            >
+            <select
+                class="h-10 w-full text-base px-2 md:text-lg lg:text-base"
+                id="asunto"
+                name="asunto"
+                required
+            >
+                <option value="booking">Booking</option>
+                <option value="prensa">Prensa</option>
+                <option value="colaboracion">Colaboración</option>
+                <option value="patrocinios">Patrocinios</option>
+                <option value="otros">Otros</option>
+            </select>
+            <br />
+            <br />
+            <label class="my-3 text-base md:text-lg lg:text-base" for="mensaje"
+                >Mensaje:</label
+            >
+            <br />
+            <textarea
+                class="h-40 w-full text-base px-2 md:text-lg lg:text-base"
+                id="mensaje"
+                name="mensaje"
+                placeholder="Mensaje"
+                required
+                style="resize: none;"></textarea>
+            <br />
+
+            <a class="enviar" href="/contacto">Enviar</a>
+        </form>
+    </div>
+</Layout>
+
+<style lang="scss">
+    h1 {
+        color: black;
+        font-weight: bold;
+    }
+
+    form {
+        color: black;
+    }
+</style>
