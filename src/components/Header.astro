@@ -1,7 +1,12 @@
 ---
-import bars from "./bars.svg";
+import bars from "../img/bars.svg";
 ---
 
+<!-- HEADER: Menú de páginas
+    
+UTILIZA 2 TRANSICIONES
+UTILIZA ANIDACIÓN, VARIABLES Y 1 MIXIN
+-->
 <div class="header">
     <button class="boton-mostrar-menu">
         <img src={bars.src} alt="" />
@@ -17,6 +22,8 @@ import bars from "./bars.svg";
 </div>
 
 <style lang="scss">
+    /* MOBILE FIRST */
+
     $medida1: 1.2rem;
     $transicion: all 0.4s ease-in-out;
 
@@ -25,8 +32,6 @@ import bars from "./bars.svg";
         align-items: center;
         justify-content: center;
     }
-
-    /* MOBILE FIRST */
 
     body {
         margin: 0;
@@ -79,7 +84,7 @@ import bars from "./bars.svg";
         .menu {
             a {
                 font-size: 1.5rem;
-        }
+            }
         }
     }
 
@@ -93,7 +98,11 @@ import bars from "./bars.svg";
 
         /* Header */
         .header {
-            background: radial-gradient(circle, rgba(255,255,255,1) 57%, rgba(215,209,198,1) 100%);
+            background: radial-gradient(
+                circle,
+                rgba(255, 255, 255, 1) 57%,
+                rgba(215, 209, 198, 1) 100%
+            );
         }
 
         /* Menú */

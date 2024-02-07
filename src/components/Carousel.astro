@@ -1,67 +1,49 @@
 ---
-import i1 from '../img/1.jpg'
-import i2 from '../img/2.jpg'
-import i3 from '../img/3.jpg'
-import i4 from '../img/4.jpg'
-import i5 from '../img/5.jpg'
-import i6 from '../img/6.jpg'
-import i7 from '../img/7.jpg'
-import i8 from '../img/8.jpg'
+import i1 from "../img/1.jpg";
+import i2 from "../img/2.jpg";
+import i3 from "../img/3.jpg";
+import i4 from "../img/4.jpg";
+import i5 from "../img/5.jpg";
+import i6 from "../img/6.jpg";
+import i7 from "../img/7.jpg";
+import i8 from "../img/8.jpg";
 ---
 
+<!-- CAROUSEL: Consiste en dos secciones (una en sentido derecha y otra en sentido izquierda) con 4 fotos cada una.
+Aunque cada sección tenga 4 fotos, se repiten una vez para hacer posible el bucle del carousel, con lo que cada section contiene 4 fotos 2 veces = 8 fotos.
+
+UTILIZA 2 ANIMACIONES
+ES EL ÚNICO COMPONENTE QUE NO UTILIZA SCSS
+-->
 <div class="h-screen flex flex-col justify-evenly -mt-8">
     <section class="w-full overflow-hidden">
         <article class="article1">
             <div class="flex">
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i1.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i1.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i2.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i2.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i3.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i3.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i4.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i4.src} />
                 </div>
             </div>
             <div class="flex">
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i1.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i1.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i2.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i2.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i3.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i3.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i4.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i4.src} />
                 </div>
             </div>
         </article>
@@ -71,54 +53,30 @@ import i8 from '../img/8.jpg'
         <article class="article2">
             <div class="flex">
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i5.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i5.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i6.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i6.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i7.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i7.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i8.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i8.src} />
                 </div>
             </div>
             <div class="flex">
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i5.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i5.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i6.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i6.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i7.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i7.src} />
                 </div>
                 <div class="flex items-center justify-center ancho">
-                    <img
-                        class="object-contain h-full w-auto"
-                        src={i8.src}
-                    />
+                    <img class="object-contain h-full w-auto" src={i8.src} />
                 </div>
             </div>
         </article>
