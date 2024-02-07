@@ -17,14 +17,14 @@ import bars from "./bars.svg";
 </div>
 
 <style lang="scss">
-
     $medida1: 1.2rem;
+    $transicion: all 0.4s ease-in-out;
 
     @mixin centrado {
         display: flex;
         align-items: center;
         justify-content: center;
-}
+    }
 
     /* MOBILE FIRST */
 
@@ -43,7 +43,7 @@ import bars from "./bars.svg";
     /* Header y menú */
     .header {
         overflow: hidden;
-        background-color: white;
+        background: rgb(255, 255, 255);
         height: 8vh;
         width: 100%;
         display: flex;
@@ -84,6 +84,11 @@ import bars from "./bars.svg";
             display: none;
         }
 
+        /* Header */
+        .header {
+            background: radial-gradient(circle, rgba(255,255,255,1) 57%, rgba(215,209,198,1) 100%);
+        }
+
         /* Menú */
         .menu {
             top: 0%;
@@ -104,6 +109,11 @@ import bars from "./bars.svg";
                 @include centrado;
                 background-color: white;
                 font-size: 1rem;
+                transition: $transicion;
+            }
+
+            a:hover {
+                color: rgb(131, 91, 52);
             }
 
             // Subrayado
@@ -115,9 +125,7 @@ import bars from "./bars.svg";
                 opacity: 0%;
                 height: 2px;
                 width: 6rem;
-                transition:
-                    opacity 0.4s ease-in-out,
-                    bottom 0.4s ease-in-out;
+                transition: $transicion;
             }
 
             a:hover .subrayado {

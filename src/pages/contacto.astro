@@ -33,23 +33,6 @@ import Layout from "../layouts/Layout.astro";
             />
             <br />
             <br />
-            <label class="my-3 text-base md:text-lg lg:text-base" for="asunto"
-                >Asunto:</label
-            >
-            <select
-                class="h-10 w-full text-base px-2 md:text-lg lg:text-base"
-                id="asunto"
-                name="asunto"
-                required
-            >
-                <option value="booking">Booking</option>
-                <option value="prensa">Prensa</option>
-                <option value="colaboracion">Colaboración</option>
-                <option value="patrocinios">Patrocinios</option>
-                <option value="otros">Otros</option>
-            </select>
-            <br />
-            <br />
             <label class="my-3 text-base md:text-lg lg:text-base" for="mensaje"
                 >Mensaje:</label
             >
@@ -62,19 +45,31 @@ import Layout from "../layouts/Layout.astro";
                 required
                 style="resize: none;"></textarea>
             <br />
-
             <a class="enviar" href="/contacto">Enviar</a>
         </form>
     </div>
 </Layout>
 
 <style lang="scss">
+    $negro: black;
+    
     h1 {
-        color: black;
+        color: $negro;
         font-weight: bold;
     }
 
     form {
-        color: black;
+        color: $negro;
+        .enviar, input, textarea {
+            transition: all 0.4s ease-in-out;
+        }
+
+        input:hover, textarea:hover {
+            box-shadow: 0px 0px 1.6rem -0.4rem rgba(0, 0, 0, 0.397);
+        }
+
+        .enviar:hover {
+            color: rgb(131, 91, 52);
+        }
     }
 </style>
