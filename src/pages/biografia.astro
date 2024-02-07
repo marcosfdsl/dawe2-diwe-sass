@@ -62,10 +62,12 @@ import i13 from "../img/13.jpeg";
             como los grandes museos, contactando, además, con otros artistas.
         </p>
         <br />
-        <img
-            src={i9.src}
-            alt="Marina (1880) correspondiente a la primera etapa de Sorolla, cuando aún no había acabado su formación académica. Museo Sorolla, Madrid."
-        />
+        <div class="div-img">
+            <img
+                src={i9.src}
+                alt="Marina (1880) correspondiente a la primera etapa de Sorolla, cuando aún no había acabado su formación académica. Museo Sorolla, Madrid."
+            />
+        </div>
         <br />
         <p>
             Con su amigo, el también pintor Pedro Gil, se desplazó a París
@@ -88,10 +90,12 @@ import i13 from "../img/13.jpeg";
             marchante, Francisco Jover.
         </p>
         <br />
-        <img
-            src={i10.src}
-            alt="Vendiendo melones (1890), óleo sobre tela. Museo Carmen Thyssen Málaga."
-        />
+        <div class="div-img">
+            <img
+                src={i10.src}
+                alt="Vendiendo melones (1890), óleo sobre tela. Museo Carmen Thyssen Málaga."
+            />
+        </div>
         <br />
         <p>
             En 1889, el pintor y su familia se instalaron en Madrid y, en apenas
@@ -143,11 +147,12 @@ import i13 from "../img/13.jpeg";
             Uno de los cuadros más destacados de la serie es El baño, de 1905 y
             que pertenece a la colección del Museo Metropolitano de Nueva York.
         </p>
-        <br />
-        <img
-            src={i11.src}
-            alt="Trata de blancas (1894), Museo Sorolla, Madrid. El autor ha de adaptarse al realismo social, dominante en los certámenes de la época. Para ello, mantiene su temática costumbrista, siendo los títulos los que aportarán la denuncia social."
-        />
+        <br /><div class="div-img">
+            <img
+                src={i11.src}
+                alt="Trata de blancas (1894), Museo Sorolla, Madrid. El autor ha de adaptarse al realismo social, dominante en los certámenes de la época. Para ello, mantiene su temática costumbrista, siendo los títulos los que aportarán la denuncia social."
+            />
+        </div>
         <br />
         <p>
             En 1905, el pintor adquirió un solar en el paseo del Obelisco de
@@ -180,11 +185,12 @@ import i13 from "../img/13.jpeg";
             pincelada y la luz de su tierra. Algunos ejemplos son Madre e hija o
             Pescadora valenciana.
         </p>
-        <br />
-        <img
-            src={i12.src}
-            alt="Ayamonte (1919). Pesca del atún. Uno de los lienzos más conocidos de su serie Visión de España."
-        />
+        <br /><div class="div-img">
+            <img
+                src={i12.src}
+                alt="Ayamonte (1919). Pesca del atún. Uno de los lienzos más conocidos de su serie Visión de España."
+            />
+        </div>
         <br />
         <p>
             Otra importante faceta que desarrolló en aquellos años fue la de
@@ -204,8 +210,9 @@ import i13 from "../img/13.jpeg";
             físicas y le impidió seguir pintando. Murió tres años después en su
             residencia veraniega de Cercedilla el 10 de agosto de 1923.
         </p>
-        <br />
-        <img src={i13.src} alt="Retrato de Raquel Meller, 1918." />
+        <br /><div class="div-img">
+            <img src={i13.src} alt="Retrato de Raquel Meller, 1918." />
+        </div>
         <br />
         <p>
             En 1932, su casa de Madrid fue reabierta como Museo Sorolla. Su
@@ -239,6 +246,12 @@ import i13 from "../img/13.jpeg";
             color: rgba(0, 0, 0, 0.648);
         }
 
+        .div-img {
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+
         img {
             view-timeline-name: --image;
             view-timeline-axis: block;
@@ -247,6 +260,10 @@ import i13 from "../img/13.jpeg";
             animation-range: entry 25% cover 50%;
             animation-fill-mode: both;
             transition: all 0.4s ease-in-out;
+            width: 100%;
+            height: auto;
+            margin-top: 1rem;
+            margin-bottom: 1rem;
         }
 
         img:hover {
@@ -261,6 +278,14 @@ import i13 from "../img/13.jpeg";
             to {
                 opacity: 1;
                 scale: 100%;
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        .contenedor-scroll {
+            img {
+                width: 70%;
             }
         }
     }
