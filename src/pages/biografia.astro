@@ -230,6 +230,7 @@ import i13 from "../img/13.jpeg";
 
 <style lang="scss">
     $negro: black;
+    $total: 100%;
 
     .contenedor-scroll {
         h1 {
@@ -248,7 +249,7 @@ import i13 from "../img/13.jpeg";
 
         .div-img {
             display: flex;
-            width: 100%;
+            width: $total;
             justify-content: center;
         }
 
@@ -257,27 +258,27 @@ import i13 from "../img/13.jpeg";
             view-timeline-axis: block;
             animation-timeline: --image;
             animation-name: show;
-            animation-range: entry 25% cover 50%;
+            animation-range: entry calc($total/4) cover calc($total/2);
             animation-fill-mode: both;
             transition: all 0.4s ease-in-out;
-            width: 100%;
+            width: $total;
             height: auto;
             margin-top: 1rem;
             margin-bottom: 1rem;
         }
 
         img:hover {
-            box-shadow: 0px 0px 2rem -0.4rem rgba(0, 0, 0, 0.397);
+            box-shadow: 0rem 0rem 2rem -0.4rem rgba(0, 0, 0, 0.397);
         }
 
         @keyframes show {
             from {
                 opacity: 0;
-                scale: 25%;
+                scale: calc($total/4);
             }
             to {
                 opacity: 1;
-                scale: 100%;
+                scale: $total;
             }
         }
     }
