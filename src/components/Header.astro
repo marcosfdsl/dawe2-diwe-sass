@@ -50,6 +50,7 @@ import bars from "./bars.svg";
     }
 
     .menu {
+        z-index: 3;
         height: 92vh;
         width: 100vw;
         display: none;
@@ -62,7 +63,7 @@ import bars from "./bars.svg";
         a {
             padding-top: $medida1;
             padding-bottom: $medida1;
-            font-size: 1rem;
+            font-size: 1.3rem;
             @include centrado;
             color: rgb(0, 0, 0);
         }
@@ -73,6 +74,12 @@ import bars from "./bars.svg";
     @media (min-width: 768px) {
         .boton-menu {
             font-size: 1.5rem;
+        }
+
+        .menu {
+            a {
+                font-size: 1.5rem;
+        }
         }
     }
 
