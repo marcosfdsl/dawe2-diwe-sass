@@ -10,36 +10,30 @@ import Layout from "../layouts/Layout.astro";
 </Layout>
 
 <style lang="scss">
-    h1,
-    h2 {
+    @mixin cambio-color($color1, $color2) {
         animation: cambio-color 4s linear infinite;
+
+        @keyframes cambio-color {
+            0%,
+            49% {
+                color: $color1;
+            }
+            50%,
+            99% {
+                color: $color2;
+            }
+        }
     }
 
     h1 {
         --color-1: white;
         --color-2: black;
+        @include cambio-color(var(--color-1), var(--color-2));
     }
 
     h2 {
         --color-1: black;
         --color-2: white;
-    }
-
-    @keyframes cambio-color {
-        0% {
-            color: var(--color-1);
-        }
-        49% {
-            color: var(--color-1);
-        }
-        50% {
-            color: var(--color-2);
-        }
-        99% {
-            color: var(--color-2);
-        }
-        100% {
-            color: var(--color-1);
-        }
+        @include cambio-color(var(--color-1), var(--color-2));
     }
 </style>
